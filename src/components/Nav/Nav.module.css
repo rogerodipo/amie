@@ -1,0 +1,104 @@
+.nav{
+    height: 6vh;
+    width: 100vw;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    display: flex;
+    align-items: center;
+    padding: 0px 4vw;
+    font-size: 1em;
+    justify-content: space-between;
+
+}
+
+.title{
+    font-size: 1.4em;
+    cursor: pointer;
+    margin-bottom: 0px;
+}
+
+.navItemsContainer {
+    list-style-type: none;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.navItem{
+    height: 6vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px;
+    cursor: pointer;
+ 
+}
+
+.navItem:hover{
+    background-color: var(--themeColor);
+    color: white;
+}
+
+span{
+    color: var(--themeColor);
+}
+
+.burger{
+    display: none;
+    z-index: 2;
+    padding: 2px;
+    border-radius: 2px;
+    cursor: pointer;
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,0.2);
+    background-color: white;
+}
+
+.burger > div {
+    width: 25px;
+    height: 2px;
+    border-radius: 5px;
+    background-color: var(--themeColor);
+    margin: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+
+@media screen and (max-width: 768px) {
+    .navItemsContainer{
+        position: absolute;
+        width: 100vw;
+        min-height: 100vh;
+        left: 100vw;
+        top: 0;
+        background-color: var(--themeColor);
+        flex-direction: column;
+        padding: 10vh;
+        color: white;
+        font-size: 1.2em;
+        transition: all 0.3s ease-in;
+        z-index: 1;
+    }
+
+    .burger{
+        display: block;
+    }
+
+    .navOut{
+        left: 0;
+    }
+
+    /* burger controls */
+
+    .rotateLeft{
+        transform: rotate(-405deg) translate(5px, -5px);
+    }
+
+    .disappear{
+        opacity: 0;
+    }
+
+    .rotateRight{
+        transform: rotate(405deg) translate(5px, 5px);
+    }
+
+  }
